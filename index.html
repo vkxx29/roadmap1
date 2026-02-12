@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Digital Roadmap 2025-2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 0.8s ease;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00d4ff, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #8892a0;
+        }
+        
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            padding: 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            overflow-x: auto;
+        }
+        
+        .timeline-item {
+            text-align: center;
+            min-width: 150px;
+            position: relative;
+            padding: 20px;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            right: -50%;
+            top: 50%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #00d4ff, transparent);
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: #00d4ff;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .stages {
+            display: grid;
+            gap: 30px;
+        }
+        
+        .stage {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 30px;
+            animation: fadeInUp 0.8s ease backwards;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stage:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.2);
+        }
+        
+        .stage-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+        }
+        
+        .stage-title {
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+        
+        .stage-duration {
+            background: rgba(0, 212, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.03);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateX(5px);
+        }
+        
+        .feature-category {
+            font-size: 0.85em;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+        
+        .feature-name {
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        
+        .priority-critical {
+            border-left-color: #ff4757;
+            box-shadow: inset 0 0 20px rgba(255, 71, 87, 0.1);
+        }
+        
+        .priority-high {
+            border-left-color: #ffa502;
+            box-shadow: inset 0 0 20px rgba(255, 165, 2, 0.1);
+        }
+        
+        .priority-medium {
+            border-left-color: #ffd93d;
+            box-shadow: inset 0 0 20px rgba(255, 217, 61, 0.1);
+        }
+        
+        .priority-low {
+            border-left-color: #6c757d;
+            box-shadow: inset 0 0 20px rgba(108, 117, 125, 0.1);
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 60px;
+            padding: 30px;
+            background: rgba(0, 212, 255, 0.05);
+            border-radius: 20px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            background: linear-gradient(90deg, #00d4ff, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+            color: #8892a0;
+            margin-top: 5px;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .features-grid { grid-template-columns: 1fr; }
+            .timeline { flex-direction: column; }
+            .timeline-item::after { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Automotive Digital Roadmap</h1>
+            <p class="subtitle">2025-2026 • Полный цикл цифровой трансформации</p>
+        </header>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <strong>Q1 2025</strong><br>MVP
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <strong>Q2 2025</strong><br>Расширение
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <strong>Q3 2025</strong><br>Сервис
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <strong>Q4 2025</strong><br>Премиум
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <strong>Q1 2026</strong><br>EV & Connected
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <strong>Q2 2026+</strong><br>Дополнительный
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #ff4757"></div>
+                <span>Критичный</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #ffa502"></div>
+                <span>Высокий</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #ffd93d"></div>
+                <span>Средний</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #6c757d"></div>
+                <span>Низкий</span>
+            </div>
+        </div>
+
+        <div class="stages">
+            <!-- Этап 1 -->
+            <div class="stage" style="animation-delay: 0.1s">
+                <div class="stage-header">
+                    <h2 class="stage-title">Этап 1: MVP</h2>
+                    <span class="stage-duration">3 месяца</span>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card priority-critical">
+                        <div class="feature-category">Каталог</div>
+                        <div class="feature-name">Модельный ряд с базовыми характеристиками</div>
+                    </div>
+                    <div class="feature-card priority-critical">
+                        <div class="feature-category">Каталог</div>
+                        <div class="feature-name">Фотогалерея (5-7 фото на модель)</div>
+                    </div>
+                    <div class="feature-card priority-critical">
+                        <div class="feature-category">Каталог</div>
+                        <div class="feature-name">Цены и комплектации</div>
+                    </div>
+                    <div class="feature-card priority-critical">
+                        <div class="feature-category">Каталог</div>
+                        <div class="feature-name">Фильтрация по типу кузова, цене, классу</div>
+                    </div>
+                    <div class="feature-card priority-critical">
+                        <div class="feature-category">Лидогенерация</div>
+                        <div class="feature-name">Форма «Записаться на тест-драйв»</div>
+                    </div>
+                    <div class="feature-card priority-critical">
+                        <div class="feature-category">Лидогенерация</div>
+                        <div class="feature-name">Форма «Получить предложение»</div>
+                    </div>
+                    <div class="feature-card priority-critical">
+                        <div class="feature-category">Лидогенерация</div>
+                        <div class="feature-name">Базовый калькулятор кредита</div>
+                    </div>
+                    <div class="feature-card priority-critical">
+                        <div class="feature-category">Дилеры</div>
+                        <div class="feature-name">Карта дилеров с контактами</div>
+                    </div>
+                    <div class="feature-card priority-critical">
+                        <div class="feature-category">Дилеры</div>
+                        <div class="feature-name">Поиск дилера по городу</div>
+                    </div>
+                    <div class="feature-card priority-critical">
+                        <div class="feature-category">Контент</div>
+                        <div class="feature-name">О компании, контакты, гарантия</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Этап 2 -->
+            <div class="stage" style="animation-delay: 0.2s">
+                <div class="stage-header">
+                    <h2 class="stage-title">Этап 2: Расширение</h2>
+                    <span class="stage-duration">2 месяца</span>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card priority-high">
+                        <div class="feature-category">Конфигуратор</div>
+                        <div class="feature-name">Выбор цвета, комплектации, опций</div>
+                    </div>
+                    <div class="feature-card priority-high">
+                        <div class="feature-category">Конфигуратор</div>
+                        <div class="feature-name">Расчёт итоговой стоимости</div>
+                    </div>
+                    <div class="feature-card priority-high">
+                        <div class="feature-category">Конфигуратор</div>
+                        <div class="feature-name">Сохранение конфигурации по ссылке</div>
+                    </div>
+                    <div class="feature-card priority-high">
+                        <div class="feature-category">Каталог</div>
+                        <div class="feature-name">360° просмотр экстерьера</div>
+                    </div>
+                    <div class="feature-card priority-high">
+                        <div class="feature-category">Каталог</div>
+                        <div class="feature-name">Сравнение моделей (до 3 авто)</div>
+                    </div>
+                    <div class="feature-card priority-high">
+                        <div class="feature-category">Спецпредложения</div>
+                        <div class="feature-name">Раздел акций и скидок</div>
+                    </div>
+                    <div class="feature-card priority-high">
+                        <div class="feature-category">Спецпредложения</div>
+                        <div class="feature-name">Трейд-ин калькулятор</div>
+                    </div>
+                    <div class="feature-card priority-high">
+                        <div class="feature-category">Личный кабинет</div>
+                        <div class="feature-name">Регистрация и авторизация</div>
+                    </div>
+                    <div class="feature-card priority-high">
+                        <div class="feature-category">Личный кабинет</div>
+                        <div class="feature-name">История запросов и конфигурации</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Этап 3 -->
+            <div class="stage" style="animation-delay: 0.3s">
+                <div class="stage-header">
+                    <h2 class="stage-title">Этап 3: Сервис</h2>
+                    <span class="stage-duration">2 месяца</span>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card priority-medium">
+                        <div class="feature-category">Сервисный портал</div>
+                        <div class="feature-name">Онлайн-запись на ТО</div>
+                    </div>
+                    <div class="feature-card priority-medium">
+                        <div class="feature-category">Сервисный портал</div>
+                        <div class="feature-name">Каталог оригинальных запчастей</div>
+                    </div>
+                    <div class="feature-card priority-medium">
+                        <div class="feature-category">Личный кабинет</div>
+                        <div class="feature-name">Привязка автомобиля по VIN</div>
+                    </div>
+                    <div class="feature-card priority-medium">
+                        <div class="feature-category">Личный кабинет</div>
+                        <div class="feature-name">Электронная сервисная книжка</div>
+                    </div>
+                    <div class="feature-card priority-medium">
+                        <div class="feature-category">Владельцам</div>
+                        <div class="feature-name">Руководства по эксплуатации (PDF)</div>
+                    </div>
+                    <div class="feature-card priority-medium">
+                        <div class="feature-category">Владельцам</div>
+                        <div class="feature-name">FAQ и база знаний</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Этап 4 -->
+            <div class="stage" style="animation-delay: 0.4s">
+                <div class="stage-header">
+                    <h2 class="stage-title">Этап 4: Премиум</h2>
+                    <span class="stage-duration">2-3 месяца</span>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card priority-low">
+                        <div class="feature-category">Иммерсивный опыт</div>
+                        <div class="feature-name">Виртуальный шоурум (3D)</div>
+                    </div>
+                    <div class="feature-card priority-low">
+                        <div class="feature-category">Иммерсивный опыт</div>
+                        <div class="feature-name">AR-просмотр авто «у вас во дворе»</div>
+                    </div>
+                    <div class="feature-card priority-low">
+                        <div class="feature-category">Онлайн-продажи</div>
+                        <div class="feature-name">Полный цикл покупки онлайн</div>
+                    </div>
+                    <div class="feature-card priority-low">
+                        <div class="feature-category">Персонализация</div>
+                        <div class="feature-name">Рекомендации на основе поведения</div>
+                    </div>
+                    <div class="feature-card priority-low">
+                        <div class="feature-category">Сообщество</div>
+                        <div class="feature-name">Клуб владельцев</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Этап 5 -->
+            <div class="stage" style="animation-delay: 0.5s">
+                <div class="stage-header">
+                    <h2 class="stage-title">Этап 5: EV & Connected</h2>
+                    <span class="stage-duration">3 месяца</span>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card priority-medium">
+                        <div class="feature-category">Электромобили</div>
+                        <div class="feature-name">Карта зарядных станций (real-time)</div>
+                    </div>
+                    <div class="feature-card priority-medium">
+                        <div class="feature-category">Электромобили</div>
+                        <div class="feature-name">Калькулятор экономии и экологии</div>
+                    </div>
+                    <div class="feature-card priority-medium">
+                        <div class="feature-category">Connected Car</div>
+                        <div class="feature-name">Дистанционное управление авто</div>
+                    </div>
+                    <div class="feature-card priority-medium">
+                        <div class="feature-category">Connected Car</div>
+                        <div class="feature-name">OTA-обновления ПО автомобиля</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Этап 6 -->
+            <div class="stage" style="animation-delay: 0.6s">
+                <div class="stage-header">
+                    <h2 class="stage-title">Этап 6: Дополнительный</h2>
+                    <span class="stage-duration">3+ месяца</span>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card priority-low">
+                        <div class="feature-category">Выбор и кастомизация</div>
+                        <div class="feature-name">Визуализатор аксессуаров</div>
+                    </div>
+                    <div class="feature-card priority-medium">
+                        <div class="feature-category">Финансы</div>
+                        <div class="feature-name">Калькулятор налогов и страховки</div>
+                    </div>
+                    <div class="feature-card priority-low">
+                        <div class="feature-category">Коммуникация</div>
+                        <div class="feature-name">Чат с «живым» владельцем</div>
+                    </div>
+                    <div class="feature-card priority-medium">
+                        <div class="feature-category">Забота</div>
+                        <div class="feature-name">Заказ тест-драйва «к дому»</div>
+                    </div>
+                    <div class="feature-card priority-low">
+                        <div class="feature-category">Обучение</div>
+                        <div class="feature-name">Виртуальный AI-ассистент</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value">70+</div>
+                <div class="stat-label">Функций</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">6</div>
+                <div class="stat-label">Этапов</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">15+</div>
+                <div class="stat-label">Месяцев</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">12</div>
+                <div class="stat-label">Критичных задач</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
