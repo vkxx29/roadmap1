@@ -120,7 +120,6 @@
             margin-top: 5px;
         }
 
-        /* ========== ПРИОРИТЕТЫ (уменьшенные в 2 раза) ========== */
         .priority-badge {
             display: inline-block;
             padding: 1px 4px;
@@ -180,7 +179,7 @@
             left: 40px;
             right: 40px;
             height: 4px;
-            background: linear-gradient(90deg, #00d9ff, #00ff88, #ffaa00, #ff6b6b, #6366f1);
+            background: linear-gradient(90deg, #00d9ff, #00ff88, #ffaa00, #6366f1);
             border-radius: 2px;
             z-index: 0;
         }
@@ -226,8 +225,7 @@
         .stage:nth-child(1) .stage-number { background: linear-gradient(135deg, #00d9ff, #0099cc); }
         .stage:nth-child(2) .stage-number { background: linear-gradient(135deg, #00ff88, #00cc6a); }
         .stage:nth-child(3) .stage-number { background: linear-gradient(135deg, #ffaa00, #ff8800); }
-        .stage:nth-child(4) .stage-number { background: linear-gradient(135deg, #ff6b6b, #ee5a5a); }
-        .stage:nth-child(5) .stage-number { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+        .stage:nth-child(4) .stage-number { background: linear-gradient(135deg, #6366f1, #4f46e5); }
 
         .stage-title {
             font-size: 1.3rem;
@@ -334,8 +332,7 @@
         .data-table tbody tr[data-stage="1"] td:first-child { border-left: 4px solid #00d9ff; }
         .data-table tbody tr[data-stage="2"] td:first-child { border-left: 4px solid #00ff88; }
         .data-table tbody tr[data-stage="3"] td:first-child { border-left: 4px solid #ffaa00; }
-        .data-table tbody tr[data-stage="4"] td:first-child { border-left: 4px solid #ff6b6b; }
-        .data-table tbody tr[data-stage="5"] td:first-child { border-left: 4px solid #6366f1; }
+        .data-table tbody tr[data-stage="4"] td:first-child { border-left: 4px solid #6366f1; }
 
         .stage-cell {
             font-weight: 600;
@@ -391,7 +388,7 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(180deg, #00d9ff, #00ff88, #ffaa00, #ff6b6b, #6366f1);
+            background: linear-gradient(180deg, #00d9ff, #00ff88, #ffaa00, #6366f1);
             border-radius: 2px;
         }
 
@@ -420,8 +417,7 @@
         .timeline-stage:nth-child(1) .timeline-marker { background: linear-gradient(135deg, #00d9ff, #0099cc); }
         .timeline-stage:nth-child(2) .timeline-marker { background: linear-gradient(135deg, #00ff88, #00cc6a); }
         .timeline-stage:nth-child(3) .timeline-marker { background: linear-gradient(135deg, #ffaa00, #ff8800); }
-        .timeline-stage:nth-child(4) .timeline-marker { background: linear-gradient(135deg, #ff6b6b, #ee5a5a); }
-        .timeline-stage:nth-child(5) .timeline-marker { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+        .timeline-stage:nth-child(4) .timeline-marker { background: linear-gradient(135deg, #6366f1, #4f46e5); }
 
         .timeline-content {
             background: rgba(255, 255, 255, 0.05);
@@ -529,8 +525,8 @@
 
     <div class="stats">
         <div class="stat-card">
-            <div class="stat-number">5</div>
-            <div class="stat-label">Этапов</div>
+            <div class="stat-number">4</div>
+            <div class="stat-label">Этапа</div>
         </div>
         <div class="stat-card">
             <div class="stat-number">65</div>
@@ -563,13 +559,6 @@
                             <li>Форма «Записаться на тест-драйв» <span class="priority-badge priority-critical">критичный</span></li>
                             <li>Форма «Получить предложение» <span class="priority-badge priority-critical">критичный</span></li>
                             <li>Базовый калькулятор кредита <span class="priority-badge priority-critical">критичный</span></li>
-                        </ul>
-                    </div>
-                    <div class="category">
-                        <div class="category-title">Дилеры</div>
-                        <ul class="feature-list">
-                            <li>Карта дилеров с адресами и контактами <span class="priority-badge priority-critical">критичный</span></li>
-                            <li>Поиск дилера по городу <span class="priority-badge priority-critical">критичный</span></li>
                         </ul>
                     </div>
                     <div class="category">
@@ -617,9 +606,10 @@
                         </ul>
                     </div>
                     <div class="category">
-                        <div class="category-title">Контент</div>
+                        <div class="category-title">Дилеры</div>
                         <ul class="feature-list">
-                            <li>Гарантия и сервис <span class="priority-badge priority-high">высокий</span></li>
+                            <li>Карта дилеров с адресами и контактами <span class="priority-badge priority-high">высокий</span></li>
+                            <li>Поиск дилера по городу <span class="priority-badge priority-high">высокий</span></li>
                         </ul>
                     </div>
                 </div>
@@ -648,6 +638,7 @@
                     <div class="category">
                         <div class="category-title">Владельцам</div>
                         <ul class="feature-list">
+                            <li>Гарантия и сервис <span class="priority-badge priority-medium">средний</span></li>
                             <li>Руководства по эксплуатации (PDF) <span class="priority-badge priority-medium">средний</span></li>
                             <li>FAQ и база знаний <span class="priority-badge priority-medium">средний</span></li>
                             <li>Отзывной сервис (проверка по VIN) <span class="priority-badge priority-medium">средний</span></li>
@@ -659,7 +650,7 @@
                 <div class="stage">
                     <div class="stage-header">
                         <div class="stage-number">4</div>
-                        <div class="stage-title">Премиум</div>
+                        <div class="stage-title">Дополнительный</div>
                     </div>
                     <div class="category">
                         <div class="category-title">Иммерсивный опыт</div>
@@ -692,14 +683,6 @@
                             <li>Отзывы и рейтинги <span class="priority-badge priority-low">низкий</span></li>
                             <li>Новости и блог <span class="priority-badge priority-low">низкий</span></li>
                         </ul>
-                    </div>
-                </div>
-
-                <!-- Этап 5 -->
-                <div class="stage">
-                    <div class="stage-header">
-                        <div class="stage-number">5</div>
-                        <div class="stage-title">Дополнительный</div>
                     </div>
                     <div class="category">
                         <div class="category-title">Личный кабинет (расширение)</div>
@@ -780,7 +763,6 @@
             <button class="filter-btn" onclick="filterTable('2')">Этап 2</button>
             <button class="filter-btn" onclick="filterTable('3')">Этап 3</button>
             <button class="filter-btn" onclick="filterTable('4')">Этап 4</button>
-            <button class="filter-btn" onclick="filterTable('5')">Этап 5</button>
         </div>
 
         <div class="table-container">
@@ -798,8 +780,6 @@
                     <tr data-stage="1"><td class="stage-cell">Этап 1: MVP</td><td class="category-cell">Лидогенерация</td><td>Форма «Записаться на тест-драйв»</td><td><span class="priority-badge priority-critical">Критичный</span></td></tr>
                     <tr data-stage="1"><td class="stage-cell">Этап 1: MVP</td><td class="category-cell">Лидогенерация</td><td>Форма «Получить предложение»</td><td><span class="priority-badge priority-critical">Критичный</span></td></tr>
                     <tr data-stage="1"><td class="stage-cell">Этап 1: MVP</td><td class="category-cell">Лидогенерация</td><td>Базовый калькулятор кредита</td><td><span class="priority-badge priority-critical">Критичный</span></td></tr>
-                    <tr data-stage="1"><td class="stage-cell">Этап 1: MVP</td><td class="category-cell">Дилеры</td><td>Карта дилеров с адресами и контактами</td><td><span class="priority-badge priority-critical">Критичный</span></td></tr>
-                    <tr data-stage="1"><td class="stage-cell">Этап 1: MVP</td><td class="category-cell">Дилеры</td><td>Поиск дилера по городу</td><td><span class="priority-badge priority-critical">Критичный</span></td></tr>
                     <tr data-stage="1"><td class="stage-cell">Этап 1: MVP</td><td class="category-cell">Контент</td><td>О компании</td><td><span class="priority-badge priority-critical">Критичный</span></td></tr>
                     <tr data-stage="1"><td class="stage-cell">Этап 1: MVP</td><td class="category-cell">Контент</td><td>Контакты</td><td><span class="priority-badge priority-critical">Критичный</span></td></tr>
                     <tr data-stage="1"><td class="stage-cell">Этап 1: MVP</td><td class="category-cell">Контент</td><td>Страницы юридической информации</td><td><span class="priority-badge priority-critical">Критичный</span></td></tr>
@@ -817,51 +797,52 @@
                     <tr data-stage="2"><td class="stage-cell">Этап 2: Расширение</td><td class="category-cell">Спецпредложения</td><td>Раздел акций и скидок</td><td><span class="priority-badge priority-high">Высокий</span></td></tr>
                     <tr data-stage="2"><td class="stage-cell">Этап 2: Расширение</td><td class="category-cell">Спецпредложения</td><td>Трейд-ин калькулятор</td><td><span class="priority-badge priority-high">Высокий</span></td></tr>
                     <tr data-stage="2"><td class="stage-cell">Этап 2: Расширение</td><td class="category-cell">Спецпредложения</td><td>Расширенный кредитный калькулятор</td><td><span class="priority-badge priority-high">Высокий</span></td></tr>
-                    <tr data-stage="2"><td class="stage-cell">Этап 2: Расширение</td><td class="category-cell">Контент</td><td>Гарантия и сервис</td><td><span class="priority-badge priority-high">Высокий</span></td></tr>
+                    <tr data-stage="2"><td class="stage-cell">Этап 2: Расширение</td><td class="category-cell">Дилеры</td><td>Карта дилеров с адресами и контактами</td><td><span class="priority-badge priority-high">Высокий</span></td></tr>
+                    <tr data-stage="2"><td class="stage-cell">Этап 2: Расширение</td><td class="category-cell">Дилеры</td><td>Поиск дилера по городу</td><td><span class="priority-badge priority-high">Высокий</span></td></tr>
                     <!-- Этап 3 -->
                     <tr data-stage="3"><td class="stage-cell">Этап 3: Сервис</td><td class="category-cell">Личный кабинет</td><td>Регистрация/авторизация</td><td><span class="priority-badge priority-high">Высокий</span></td></tr>
                     <tr data-stage="3"><td class="stage-cell">Этап 3: Сервис</td><td class="category-cell">Личный кабинет</td><td>Привязка автомобиля по VIN</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
                     <tr data-stage="3"><td class="stage-cell">Этап 3: Сервис</td><td class="category-cell">Сервисный портал</td><td>Онлайн-запись на ТО</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
                     <tr data-stage="3"><td class="stage-cell">Этап 3: Сервис</td><td class="category-cell">Сервисный портал</td><td>Каталог оригинальных запчастей</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
                     <tr data-stage="3"><td class="stage-cell">Этап 3: Сервис</td><td class="category-cell">Сервисный портал</td><td>История обслуживания</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
+                    <tr data-stage="3"><td class="stage-cell">Этап 3: Сервис</td><td class="category-cell">Владельцам</td><td>Гарантия и сервис</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
                     <tr data-stage="3"><td class="stage-cell">Этап 3: Сервис</td><td class="category-cell">Владельцам</td><td>Руководства по эксплуатации (PDF)</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
                     <tr data-stage="3"><td class="stage-cell">Этап 3: Сервис</td><td class="category-cell">Владельцам</td><td>FAQ и база знаний</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
                     <tr data-stage="3"><td class="stage-cell">Этап 3: Сервис</td><td class="category-cell">Владельцам</td><td>Отзывной сервис (проверка по VIN)</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
                     <!-- Этап 4 -->
-                    <tr data-stage="4"><td class="stage-cell">Этап 4: Премиум</td><td class="category-cell">Иммерсивный опыт</td><td>Виртуальный шоурум (3D)</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="4"><td class="stage-cell">Этап 4: Премиум</td><td class="category-cell">Иммерсивный опыт</td><td>AR-просмотр «у вас во дворе»</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="4"><td class="stage-cell">Этап 4: Премиум</td><td class="category-cell">Иммерсивный опыт</td><td>Видеоконсультации с дилером</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="4"><td class="stage-cell">Этап 4: Премиум</td><td class="category-cell">Онлайн-продажи</td><td>Полный цикл покупки онлайн</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="4"><td class="stage-cell">Этап 4: Премиум</td><td class="category-cell">Онлайн-продажи</td><td>Бронирование авто с депозитом</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="4"><td class="stage-cell">Этап 4: Премиум</td><td class="category-cell">Онлайн-продажи</td><td>Электронный документооборот</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="4"><td class="stage-cell">Этап 4: Премиум</td><td class="category-cell">Персонализация</td><td>Рекомендации на основе поведения</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="4"><td class="stage-cell">Этап 4: Премиум</td><td class="category-cell">Персонализация</td><td>Персональные предложения</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="4"><td class="stage-cell">Этап 4: Премиум</td><td class="category-cell">Персонализация</td><td>Программа лояльности</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="4"><td class="stage-cell">Этап 4: Премиум</td><td class="category-cell">Сообщество</td><td>Клуб владельцев</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="4"><td class="stage-cell">Этап 4: Премиум</td><td class="category-cell">Сообщество</td><td>Отзывы и рейтинги</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="4"><td class="stage-cell">Этап 4: Премиум</td><td class="category-cell">Сообщество</td><td>Новости и блог</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <!-- Этап 5 -->
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Личный кабинет (расширение)</td><td>История запросов</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Личный кабинет (расширение)</td><td>Сохранённые конфигурации</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Личный кабинет (расширение)</td><td>Напоминания о ТО</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Личный кабинет (расширение)</td><td>Электронная сервисная книжка</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Выбор и кастомизация</td><td>Визуализатор аксессуаров</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Выбор и кастомизация</td><td>Конструктор ливрей и винила</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Выбор и кастомизация</td><td>Подбор по образу жизни (Quiz)</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Выбор и кастомизация</td><td>Конфигуратор гаража</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Финансы</td><td>Калькулятор налогов и страховки</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Финансы</td><td>Сервис подписки на автомобиль</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Финансы</td><td>Биржа одобренных кредитов</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Финансы</td><td>Онлайн-оценка выкупа</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Коммуникация</td><td>Чат с «живым» владельцем</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Коммуникация</td><td>Карта путешествий владельцев</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Коммуникация</td><td>Стена почета (Hall of Fame)</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Забота</td><td>Калькулятор стоимости ТО</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Забота</td><td>Тест-драйв «к дому» (Concierge)</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Обучение</td><td>Интерактивная видео-инструкция</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Обучение</td><td>Виртуальный ассистент (AI)</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Shop</td><td>Вторичный рынок запчастей</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
-                    <tr data-stage="5"><td class="stage-cell">Этап 5: Дополнительный</td><td class="category-cell">Shop</td><td>Продажа цифровых товаров</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Иммерсивный опыт</td><td>Виртуальный шоурум (3D)</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Иммерсивный опыт</td><td>AR-просмотр «у вас во дворе»</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Иммерсивный опыт</td><td>Видеоконсультации с дилером</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Онлайн-продажи</td><td>Полный цикл покупки онлайн</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Онлайн-продажи</td><td>Бронирование авто с депозитом</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Онлайн-продажи</td><td>Электронный документооборот</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Персонализация</td><td>Рекомендации на основе поведения</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Персонализация</td><td>Персональные предложения</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Персонализация</td><td>Программа лояльности</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Сообщество</td><td>Клуб владельцев</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Сообщество</td><td>Отзывы и рейтинги</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Сообщество</td><td>Новости и блог</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Личный кабинет (расширение)</td><td>История запросов</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Личный кабинет (расширение)</td><td>Сохранённые конфигурации</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Личный кабинет (расширение)</td><td>Напоминания о ТО</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Личный кабинет (расширение)</td><td>Электронная сервисная книжка</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Выбор и кастомизация</td><td>Визуализатор аксессуаров</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Выбор и кастомизация</td><td>Конструктор ливрей и винила</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Выбор и кастомизация</td><td>Подбор по образу жизни (Quiz)</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Выбор и кастомизация</td><td>Конфигуратор гаража</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Финансы</td><td>Калькулятор налогов и страховки</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Финансы</td><td>Сервис подписки на автомобиль</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Финансы</td><td>Биржа одобренных кредитов</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Финансы</td><td>Онлайн-оценка выкупа</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Коммуникация</td><td>Чат с «живым» владельцем</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Коммуникация</td><td>Карта путешествий владельцев</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Коммуникация</td><td>Стена почета (Hall of Fame)</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Забота</td><td>Калькулятор стоимости ТО</td><td><span class="priority-badge priority-medium">Средний</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Забота</td><td>Тест-драйв «к дому» (Concierge)</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Обучение</td><td>Интерактивная видео-инструкция</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Обучение</td><td>Виртуальный ассистент (AI)</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Shop</td><td>Вторичный рынок запчастей</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
+                    <tr data-stage="4"><td class="stage-cell">Этап 4: Дополнительный</td><td class="category-cell">Shop</td><td>Продажа цифровых товаров</td><td><span class="priority-badge priority-low">Низкий</span></td></tr>
                 </tbody>
             </table>
         </div>
@@ -892,13 +873,6 @@
                                 <li>Форма «Записаться на тест-драйв» <span class="priority-badge priority-critical">критичный</span></li>
                                 <li>Форма «Получить предложение» <span class="priority-badge priority-critical">критичный</span></li>
                                 <li>Базовый калькулятор кредита <span class="priority-badge priority-critical">критичный</span></li>
-                            </ul>
-                        </div>
-                        <div class="timeline-category">
-                            <div class="timeline-category-title">Дилеры</div>
-                            <ul class="timeline-features">
-                                <li>Карта дилеров с адресами и контактами <span class="priority-badge priority-critical">критичный</span></li>
-                                <li>Поиск дилера по городу <span class="priority-badge priority-critical">критичный</span></li>
                             </ul>
                         </div>
                         <div class="timeline-category">
@@ -948,9 +922,10 @@
                             </ul>
                         </div>
                         <div class="timeline-category">
-                            <div class="timeline-category-title">Контент</div>
+                            <div class="timeline-category-title">Дилеры</div>
                             <ul class="timeline-features">
-                                <li>Гарантия и сервис <span class="priority-badge priority-high">высокий</span></li>
+                                <li>Карта дилеров с адресами и контактами <span class="priority-badge priority-high">высокий</span></li>
+                                <li>Поиск дилера по городу <span class="priority-badge priority-high">высокий</span></li>
                             </ul>
                         </div>
                     </div>
@@ -981,6 +956,7 @@
                         <div class="timeline-category">
                             <div class="timeline-category-title">Владельцам</div>
                             <ul class="timeline-features">
+                                <li>Гарантия и сервис <span class="priority-badge priority-medium">средний</span></li>
                                 <li>Руководства по эксплуатации (PDF) <span class="priority-badge priority-medium">средний</span></li>
                                 <li>FAQ и база знаний <span class="priority-badge priority-medium">средний</span></li>
                                 <li>Отзывной сервис (проверка по VIN) <span class="priority-badge priority-medium">средний</span></li>
@@ -994,7 +970,7 @@
             <div class="timeline-stage">
                 <div class="timeline-marker">4</div>
                 <div class="timeline-content">
-                    <div class="timeline-title">Этап 4: Премиум</div>
+                    <div class="timeline-title">Этап 4: Дополнительный</div>
                     <div class="timeline-categories">
                         <div class="timeline-category">
                             <div class="timeline-category-title">Иммерсивный опыт</div>
@@ -1028,16 +1004,6 @@
                                 <li>Новости и блог <span class="priority-badge priority-low">низкий</span></li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Этап 5 -->
-            <div class="timeline-stage">
-                <div class="timeline-marker">5</div>
-                <div class="timeline-content">
-                    <div class="timeline-title">Этап 5: Дополнительный</div>
-                    <div class="timeline-categories">
                         <div class="timeline-category">
                             <div class="timeline-category-title">Личный кабинет (расширение)</div>
                             <ul class="timeline-features">
